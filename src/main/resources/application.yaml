@@ -18,3 +18,9 @@ fortune:
     upload-dir: ./uploads/fortune-cards/  # 프로젝트 루트 하위 uploads 폴더에 자동 생성
   # 모바일로 QR을 찍었을 때 접속할 베이스 URL (로컬 테스트 시 PC의 내부 IP로 변경)
   base-url: http://localhost:5173
+
+# SAZU 만세력·운세 외부 API 설정 (https://api.sazu.app)
+sazu:
+  api:
+    base-url: https://api.sazu.app
+    key: ${SAZU_API_KEY:sazu_free_d9b702226e2819b7ac96dc80b2a48b06434406adf93bab3787e904ba4c2aa305}
