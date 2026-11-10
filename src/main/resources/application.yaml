@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: sazu
+
+  # Multipart 이미지 파일 업로드 용량 설정
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB      # 단일 파일 최대 용량
+      max-request-size: 10MB   # 전체 요청 최대 용량
+
+# 커스텀 설정: 캡처된 운세 카드 이미지가 저장될 로컬 경로
+fortune:
+  storage:
+    upload-dir: ./uploads/fortune-cards/  # 프로젝트 루트 하위 uploads 폴더에 자동 생성
+  # 모바일로 QR을 찍었을 때 접속할 베이스 URL (로컬 테스트 시 PC의 내부 IP로 변경)
+  base-url: http://localhost:5173
